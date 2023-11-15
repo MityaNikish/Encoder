@@ -1,21 +1,21 @@
 #pragma once
 #include "EncryptionMode.h"
-#include <random>
 
-class CipherBlockChaining : public EncryptionMode
+class CipherBlockChaining final : public EncryptionMode
 {
-private:
-	unsigned char key = 255;
-	unsigned char def_init_vector = std::mt19937(std::random_device{}())() % 256;
+	uint8_t def_init_vector_ = 255;
 
 public:
 	CipherBlockChaining() = default;
-	CipherBlockChaining(unsigned char _key);
-
-public:
-	std::string encryption(const std::string& str) override;
-	std::string decryption(const std::string& str) override;
+	CipherBlockChaining(uint8_t key, uint8_t def_init_vector);
+	~CipherBlockChaining() override = default;
+	CipherBlockChaining& operator=(const CipherBlockChaining&) = delete;
+	CipherBlockChaining(const CipherBlockChaining&) = delete;
 
 private:
-	unsigned char algorithm(unsigned char ch);
+	[[nodiscard]] std::string encryption(const std::string& str) const override;
+	[[nodiscard]] std::string decryption(const std::string& str) const override;
+
+private:
+	unsigned char algorithm(unsigned char ch) const;
 };

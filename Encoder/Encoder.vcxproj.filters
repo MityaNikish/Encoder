@@ -1,66 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Encoder">
-      <UniqueIdentifier>{67d792ad-d16d-4df3-ae9a-ee110be9df22}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Encoder\Client">
-      <UniqueIdentifier>{2da98a54-ca44-40ac-a3a2-713d0b5a9c1b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="EncryptionMode">
-      <UniqueIdentifier>{2f29b13e-a3b2-425d-af7e-bb1ea541a739}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Exception">
       <UniqueIdentifier>{d9ea600d-a10e-45c3-abad-eec72c2205a6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Parser">
-      <UniqueIdentifier>{2a68577d-f004-4c4b-9bf6-50d9f63c1832}</UniqueIdentifier>
+    <Filter Include="Strategics">
+      <UniqueIdentifier>{2f29b13e-a3b2-425d-af7e-bb1ea541a739}</UniqueIdentifier>
     </Filter>
-    <Filter Include="EncryptionMode\ChiperBlockChaining">
-      <UniqueIdentifier>{1375f54f-4d59-402f-82fd-dc15238ff9c0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="EncryptionMode\ElectronicCodebook">
-      <UniqueIdentifier>{02e880fa-087e-41c3-8837-db6e3763c6c2}</UniqueIdentifier>
+    <Filter Include="Context">
+      <UniqueIdentifier>{67d792ad-d16d-4df3-ae9a-ee110be9df22}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Parser.cpp">
-      <Filter>Parser</Filter>
-    </ClCompile>
     <ClCompile Include="Exception.cpp">
       <Filter>Exception</Filter>
     </ClCompile>
-    <ClCompile Include="Client.cpp">
-      <Filter>Encoder\Client</Filter>
+    <ClCompile Include="Encoder.cpp">
+      <Filter>Context</Filter>
     </ClCompile>
     <ClCompile Include="CipherBlockChaining.cpp">
-      <Filter>EncryptionMode\ChiperBlockChaining</Filter>
+      <Filter>Strategics</Filter>
     </ClCompile>
     <ClCompile Include="ElectronicCodebook.cpp">
-      <Filter>EncryptionMode\ElectronicCodebook</Filter>
+      <Filter>Strategics</Filter>
+    </ClCompile>
+    <ClCompile Include="PropagationCipherBlockChaining.cpp">
+      <Filter>Strategics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Parser.h">
-      <Filter>Parser</Filter>
-    </ClInclude>
     <ClInclude Include="Exception.h">
       <Filter>Exception</Filter>
     </ClInclude>
-    <ClInclude Include="Client.h">
-      <Filter>Encoder\Client</Filter>
-    </ClInclude>
-    <ClInclude Include="CipherBlockChaining.h">
-      <Filter>EncryptionMode\ChiperBlockChaining</Filter>
-    </ClInclude>
-    <ClInclude Include="ElectronicCodebook.h">
-      <Filter>EncryptionMode\ElectronicCodebook</Filter>
-    </ClInclude>
     <ClInclude Include="EncryptionMode.h">
-      <Filter>EncryptionMode</Filter>
+      <Filter>Strategics</Filter>
     </ClInclude>
     <ClInclude Include="Encoder.h">
-      <Filter>Encoder</Filter>
+      <Filter>Context</Filter>
+    </ClInclude>
+    <ClInclude Include="CipherBlockChaining.h">
+      <Filter>Strategics</Filter>
+    </ClInclude>
+    <ClInclude Include="ElectronicCodebook.h">
+      <Filter>Strategics</Filter>
+    </ClInclude>
+    <ClInclude Include="PropagationCipherBlockChaining.h">
+      <Filter>Strategics</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

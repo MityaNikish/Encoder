@@ -1,14 +1,16 @@
 #pragma once
 #include "EncryptionMode.h"
 
-class ElectronicCodebook : public EncryptionMode
+class ElectronicCodebook final : public EncryptionMode
 {
-	unsigned char key = 255;
-
 public:
 	ElectronicCodebook() = default;
-	ElectronicCodebook(unsigned char _key);
+	ElectronicCodebook(uint8_t key);
+	~ElectronicCodebook() override = default;
+	ElectronicCodebook& operator=(const ElectronicCodebook&) = delete;
+	ElectronicCodebook(const ElectronicCodebook&) = delete;
 
-	std::string encryption(const std::string& str) override;
-	std::string decryption(const std::string& str) override;
+private:
+	[[nodiscard]] std::string encryption(const std::string& str) const override;
+	[[nodiscard]] std::string decryption(const std::string& str) const override;
 };

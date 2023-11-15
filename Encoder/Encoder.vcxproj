@@ -132,19 +132,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CipherBlockChaining.cpp" />
-    <ClCompile Include="Client.cpp" />
     <ClCompile Include="ElectronicCodebook.cpp" />
+    <ClCompile Include="Encoder.cpp" />
     <ClCompile Include="Exception.cpp" />
-    <ClCompile Include="Parser.cpp" />
+    <ClCompile Include="PropagationCipherBlockChaining.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CipherBlockChaining.h" />
-    <ClInclude Include="Client.h" />
     <ClInclude Include="ElectronicCodebook.h" />
     <ClInclude Include="Encoder.h" />
     <ClInclude Include="EncryptionMode.h" />
     <ClInclude Include="Exception.h" />
-    <ClInclude Include="Parser.h" />
+    <ClInclude Include="PropagationCipherBlockChaining.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
